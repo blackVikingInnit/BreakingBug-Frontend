@@ -6,9 +6,11 @@ import emptyCart from "../../../assets/cartimg.png"
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import { addToCart, removeAllFromCart, removeFromCart } from '../../../redux/userSlice';
-import { BasicButton, LightPurpleButton } from '../../../utils/styles';
+/**LightPurpleButton and BasicButton defined not in styles but buttonStyles instead */
+import { BasicButton, LightPurpleButton } from '../../../utils/buttonStyles';
 import { useNavigate } from 'react-router-dom';
-import { updateCustomer } from '../../../redux/userSlice';
+/**updateCustomer defined in userHandle not userSlice */
+import { updateCustomer } from '../../../redux/userHandle';
 
 const Cart = ({ setIsCartOpen }) => {
 

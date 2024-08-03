@@ -12,7 +12,8 @@ import { useSelector } from 'react-redux';
 
 const SideBar = () => {
 
-    
+    /**Define location from useLocation() */
+    const location = useLocation();
 
     const { currentRole } = useSelector(state => state.user);
 

@@ -49,7 +49,8 @@ export const addStuff = (address, fields) => async (dispatch) => {
 
     try {
         const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/${address}`, fields, {
-            headers: { 'Content-Type': 'application/json' },---
+            /** '---' not required while doing api call */
+            headers: { 'Content-Type': 'application/json' },
         });
 
         if (result.data.message) {
@@ -96,9 +97,11 @@ export const deleteStuff = (id, address) => async (dispatch) => {
 }
 
 export const updateCustomer = (fields, id) => async (dispatch) => {
+    /**Missing try block and irregular placements of closed curly brackets */
+    try{
     dispatch(updateCurrentUser(fields));
     await axios.put(`${process.env.REACT_APP_BASE_URL}/CustomerUpdate/${id}`, fields);
-};
+
 
         dispatch(stuffUpdated());
 
@@ -108,7 +111,7 @@ export const updateCustomer = (fields, id) => async (dispatch) => {
 
     }
 
-    }
+};
 
 export const getProductsbySeller = (id) => async (dispatch) => {
     dispatch(getRequest());
@@ -159,7 +162,8 @@ export const getProductDetails = (id) => async (dispatch) => {
     }
 }
 
-export const getCustomers = (id) => async (dispatch) => {
+/**Added address parameter.*/
+export const getCustomers = (id, address) => async (dispatch) => {
     dispatch(getRequest());
 
     try {

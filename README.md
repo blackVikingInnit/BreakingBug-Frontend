@@ -133,3 +133,6 @@ Then, copy and paste the URL on your browser to deploy your website.
 <br>
 <img src="https://images.prismic.io/ieeemuj/Zqu58B5LeNNTxuyF_cs-logo.png?auto=format,compress" alt="IEEE CS MUJ Logo">
 <br>
+
+## Link to sheet of errors
+- URL : https://docs.google.com/spreadsheets/d/1hLTotThNosU4NbIAXQbMCMDwrliVqJYqlE4FOjNi8j8/edit?usp=sharing

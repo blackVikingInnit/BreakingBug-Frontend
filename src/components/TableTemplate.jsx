@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
-import {Table, TableBody, TableCell, TableContainer, TableRow, styled} from '@mui/material';
+import {Table, TableBody, TableCell, TableContainer, TableRow, styled, tableCellClasses} from '@mui/material';
+/**Created ButtonHaver component and importing it */
+import ButtonHaver from './ButtonHaver';
 
 const TableTemplate = ({columns, rows}) => {
   const [page, setPage] = useState(0);
@@ -33,7 +35,7 @@ const TableTemplate = ({columns, rows}) => {
                         <StyledTableCell key={column.Id} align={column.align}>
                           {
                             column.format && typeof value === 'number'
-                              ? column.format(id)
+                              ? column.format(value)
                               : value
                           }
                         </StyledTableCell>

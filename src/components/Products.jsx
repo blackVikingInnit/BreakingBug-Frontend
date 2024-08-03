@@ -12,7 +12,8 @@ const Products = ({}) => {
   const dispatch = useDispatch();
 
   const itemsPerPage = 9;
-
+  /**define productData from redux store */
+  const productData = useSelector((state) => state.user.productData);
   const { currentRole, responseSearch } = useSelector();
   const [currentPage, setCurrentPage] = useState(1);
   const [showPopup, setShowPopup] = useState(false);
@@ -38,6 +39,9 @@ const Products = ({}) => {
     setMessage("You have to login or register first")
     setShowPopup(true)
   };
+
+  /**Defining navigate function */
+  const navigate = useNavigate()
 
   if (!responseSearch) {
     return <div>Product not found</div>;

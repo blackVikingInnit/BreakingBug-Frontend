@@ -6,6 +6,10 @@ const AlertDialogSlide = ({ dialog, showDialog, setShowDialog }) => {
     const handleClose = () => {
         setShowDialog(false);
     };
+    /**Defining taskHandler */
+    const taskHandler = () => {
+        console.log("Task Handler defined")
+    };
     return (
         <Dialog
             open={showDialog}

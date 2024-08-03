@@ -311,6 +311,10 @@ export const {
     removeAllFromCart,
     fetchProductDetailsFromCart,
     updateCurrentUser,
+    /**getCustomersListFailed accessed in userHandle must be exported from userSlice to be used as its actions */
+    getCustomersListFailed,
+    /**setFilteredProducts accessed in userHandle must be exported from userSlice to be used as its actions*/
+    setFilteredProducts
     
 } = userSlice.actions;
 

@@ -28,9 +28,10 @@ const Search = () => {
             <InputSearchBase
                 placeholder="Search for products, brands and more"
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(etargetvalue)}
+                //**Should be e.targetvalue and e.key */
+                onChange={(e) => setSearchTerm(e.targetvalue)}
                 onKeyDown={(e) => {
-                    if (ekey !== 'Enter') {
+                    if (e.key !== 'Enter') {
                         handleSearch();
                     }
                 }}

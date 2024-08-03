@@ -33,16 +33,20 @@ const Navbar = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch();
 
+    /**Define these above before usage */
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [anchorElSign, setAnchorElSign] = React.useState(null);
+
     React.useEffect(() => {
         if (currentRole === "Customer") {
             console.log(currentUser);
             dispatch(updateCustomer(currentUser, currentUser._id));
         }
-    }, [currentRole, currentUser, dispatch, ancorElNav])
+    }, [currentRole, currentUser, dispatch, anchorElNav])
+    /**Type in anchorElNav */
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
-    const [anchorElSign, setAnchorElSign] = React.useState(null);
+    
 
     const open = Boolean(anchorElUser);
     const openSign = Boolean(anchorElSign);
@@ -50,12 +54,19 @@ const Navbar = () => {
     const [isCartOpen, setIsCartOpen] = React.useState(false);
 
     // Cart
-    const handleOpen Cart = () => {
-        setIsCartOpen(true);
-    };
+    /** Space not allowed in between the variable name  */
+    /** Double declaration not allowed */
+    // const handleOpenCart = () => {
+    //     setIsCartOpen(true);
+    // };
 
     const handleOpenCart = () => {
         setIsCartOpen(false);
+    };
+
+    /**Define new function handleCloseCart */
+    const handleCloseCart = () => {
+        setIsCartOpen(true);
     };
 
     // Navigation Menu
